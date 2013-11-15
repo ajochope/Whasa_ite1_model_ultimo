@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="MPi-me-Z0L">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Whasa View Controller - Whasa!!!-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="WhasaViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bienvenido" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKi-MO-snw">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Introduce tu nick" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDJ-AH-dh6">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z0i-W2-m2J">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="152" id="nBW-rD-CY9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="QW0-49-Bgu"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lys-i7-koJ">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Entrar">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openContacts:" destination="2" eventType="touchUpInside" id="UeX-8o-bfv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z0i-W2-m2J" firstAttribute="top" secondItem="xDJ-AH-dh6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1Ib-sC-TqR"/>
+                            <constraint firstItem="lys-i7-koJ" firstAttribute="centerX" secondItem="z0i-W2-m2J" secondAttribute="centerX" type="default" id="FCI-Iw-DLc"/>
+                            <constraint firstItem="lys-i7-koJ" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="J5Y-RL-J2a"/>
+                            <constraint firstAttribute="bottom" secondItem="z0i-W2-m2J" secondAttribute="bottom" constant="127" id="Jn3-Fv-Ga3"/>
+                            <constraint firstItem="uKi-MO-snw" firstAttribute="top" secondItem="3" secondAttribute="top" constant="10" id="Zy6-wu-Dkf"/>
+                            <constraint firstItem="xDJ-AH-dh6" firstAttribute="centerX" secondItem="uKi-MO-snw" secondAttribute="centerX" type="default" id="eXY-SZ-VeQ"/>
+                            <constraint firstAttribute="bottom" secondItem="lys-i7-koJ" secondAttribute="bottom" constant="11" id="gL8-dh-RRv"/>
+                            <constraint firstItem="xDJ-AH-dh6" firstAttribute="centerX" secondItem="z0i-W2-m2J" secondAttribute="centerX" type="default" id="mKs-1K-rlb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Whasa!!!" id="GZW-4T-LB8"/>
+                    <connections>
+                        <outlet property="nick" destination="z0i-W2-m2J" id="NzF-FR-OPL"/>
+                        <segue destination="ojt-3z-Nfn" kind="push" identifier="aChat" id="nQT-UJ-9sx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="615" y="76"/>
+        </scene>
+        <!--Whasa Chat View Controller - Chat-->
+        <scene sceneID="nob-sC-4Zr">
+            <objects>
+                <viewController id="ojt-3z-Nfn" customClass="WhasaChatViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YI5-JJ-fPa">
+                        <rect key="frame" x="0.0" y="94" width="320" height="386"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YbD-qH-rUe">
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FWa-hP-m7R">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="243" id="1uB-6U-75x"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="ojt-3z-Nfn" id="frK-yZ-3bY"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9om-sd-hii">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="2Pb-Je-OmE"/>
+                                            <constraint firstAttribute="width" constant="64" id="tX5-Vl-FCK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Enviar">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enviarMensaje:" destination="ojt-3z-Nfn" eventType="touchUpInside" id="cO2-Nr-Mq7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.38823533058166504" green="0.48235297203063965" blue="0.61176472902297974" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstItem="9om-sd-hii" firstAttribute="centerY" secondItem="YbD-qH-rUe" secondAttribute="centerY" type="default" id="PWy-rk-Fh5"/>
+                                    <constraint firstItem="9om-sd-hii" firstAttribute="trailing" secondItem="YbD-qH-rUe" secondAttribute="trailing" type="default" id="Pjl-Ww-DeR"/>
+                                    <constraint firstItem="9om-sd-hii" firstAttribute="baseline" secondItem="FWa-hP-m7R" secondAttribute="baseline" type="default" id="SLH-RB-RbH"/>
+                                    <constraint firstItem="9om-sd-hii" firstAttribute="leading" secondItem="FWa-hP-m7R" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="k8o-Qj-fws"/>
+                                    <constraint firstItem="9om-sd-hii" firstAttribute="centerY" secondItem="FWa-hP-m7R" secondAttribute="centerY" type="default" id="ysv-g2-ohq"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="bzH-dz-swH">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="338" id="Ibe-B8-0Cj"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="messageCell" rowHeight="44" id="VzQ-GU-PCv">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ojt-3z-Nfn" id="pnZ-AS-Li7"/>
+                                    <outlet property="delegate" destination="ojt-3z-Nfn" id="nPW-9v-64J"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YbD-qH-rUe" firstAttribute="leading" secondItem="YI5-JJ-fPa" secondAttribute="leading" type="default" id="2ME-MW-JDI"/>
+                            <constraint firstItem="bzH-dz-swH" firstAttribute="trailing" secondItem="YI5-JJ-fPa" secondAttribute="trailing" type="default" id="8Du-mI-uej"/>
+                            <constraint firstItem="bzH-dz-swH" firstAttribute="leading" secondItem="YI5-JJ-fPa" secondAttribute="leading" type="default" id="9na-dS-WjB"/>
+                            <constraint firstItem="YbD-qH-rUe" firstAttribute="top" secondItem="YI5-JJ-fPa" secondAttribute="top" constant="337" id="B6v-uo-qpD"/>
+                            <constraint firstItem="YbD-qH-rUe" firstAttribute="trailing" secondItem="YI5-JJ-fPa" secondAttribute="trailing" type="default" id="VkW-2w-RVw"/>
+                            <constraint firstAttribute="bottom" secondItem="YbD-qH-rUe" secondAttribute="bottom" constant="-2" id="Y7S-ps-a01"/>
+                            <constraint firstItem="bzH-dz-swH" firstAttribute="top" secondItem="YI5-JJ-fPa" secondAttribute="top" type="default" id="xfk-W1-qew"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chat" prompt="Hablando con..." id="pHg-Tx-TA0">
+                        <barButtonItem key="backBarButtonItem" title="Volver" id="MB1-7l-XYB"/>
+                        <barButtonItem key="rightBarButtonItem" title="Ver Contacto" id="koA-4L-8ka">
+                            <connections>
+                                <segue destination="dNf-oR-vP8" kind="push" id="OGM-w7-FIh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="conversacion" destination="bzH-dz-swH" id="jYZ-5W-Zb9"/>
+                        <outlet property="mensaje" destination="FWa-hP-m7R" id="40u-Bh-v3l"/>
+                        <outlet property="navItem" destination="pHg-Tx-TA0" id="pGO-4I-Jvk"/>
+                        <outlet property="verContactoBtn" destination="koA-4L-8ka" id="eia-rl-pbX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WFL-xr-kDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1118" y="77"/>
+        </scene>
+        <!--View Controller - Contacto-->
+        <scene sceneID="M4O-Rf-4qs">
+            <objects>
+                <viewController id="dNf-oR-vP8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lxM-dy-kVN">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contacto" id="ddB-b9-06X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5fg-QL-Eph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1436" y="786"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="txY-a0-Jdz">
+            <objects>
+                <navigationController id="MPi-me-Z0L" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DcC-q2-S8z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="g20-SI-TCV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xYX-bo-fGS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89" y="76"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="WhasaChatViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WhasaChatViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="enviarMensaje:"/>
+                <relationship kind="outlet" name="conversacion" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="mensaje" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="navItem" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="verContactoBtn" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="WhasaViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WhasaViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="openContacts:"/>
+                <relationship kind="outlet" name="nick" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
